@@ -21,7 +21,7 @@ const NavBar = () => {
         >
           <Navbar.Brand>
             <h3 className="fs-4 fw-bold header-text text-uppercase">
-              Travel_AJ
+              Travel_SQUARE
             </h3>
           </Navbar.Brand>
           <Navbar.Toggle aria-controls="responsive-navbar-nav" />
@@ -43,10 +43,10 @@ const NavBar = () => {
               </Link>
 
               <Link
-                to="/manageservices"
+                to="/manageorders"
                 className="text-decoration-none fs-5 me-3 header-text fw-bold"
               >
-                Manage all Services
+                Manage all Orders
               </Link>
 
               <Link
@@ -61,6 +61,12 @@ const NavBar = () => {
                 className="text-decoration-none fs-5 me-3 header-text fw-bold"
               >
                 About
+              </Link>
+              <Link
+                to="/login"
+                className="text-decoration-none fs-5 me-3 header-text fw-bold"
+              >
+                Login
               </Link>
              
 

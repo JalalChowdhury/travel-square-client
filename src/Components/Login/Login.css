@@ -1,0 +1,21 @@
+.login-btn{
+    background-color: white;
+    border: 1px solid black;
+    width: 350px;
+    border-radius: 50px;
+    margin-top: 80px;
+    color: black;
+}
+.login-btn img{
+    width: 31px;
+    
+}
+
+.login-container{
+    margin-top: 120px;
+    /* border: 1px solid black; */
+    box-shadow: 10px 10px 15px gray;
+    border-radius: 10px;
+    padding: 50px;
+
+}

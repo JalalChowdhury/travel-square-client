@@ -7,7 +7,7 @@ const ServicePackage = (props) => {
 
     const { _id, title, image, price, description } = props.service;
 
-    const serviceDetailURL = `/service/${_id}`;
+    const serviceDetailURL = `/home/${_id}`;
     return (
         <div className=" card_container col my-2 d-flex flex-wrap justify-content-center align-items-center mb-4">
             <div className="card-design h-100">
@@ -23,7 +23,7 @@ const ServicePackage = (props) => {
                     {/* <p>{description}</p> */}
 
                     <Link to={serviceDetailURL}>
-                        <Button className="btn-design">Booking</Button>
+                        <Button className="btn-design">Details</Button>
                     </Link>
 
 
