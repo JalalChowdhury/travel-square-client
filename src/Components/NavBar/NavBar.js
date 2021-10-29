@@ -34,11 +34,26 @@ const NavBar = () => {
                 Home
               </Link>
 
+
               <Link
-                to="/services"
+                to="/myorders"
                 className="text-decoration-none fs-5 me-3 header-text fw-bold"
               >
-                Services
+                My Orders
+              </Link>
+
+              <Link
+                to="/manageservices"
+                className="text-decoration-none fs-5 me-3 header-text fw-bold"
+              >
+                Manage all Services
+              </Link>
+
+              <Link
+                to="/addservices"
+                className="text-decoration-none fs-5 me-3 header-text fw-bold"
+              >
+                Add Services
               </Link>
 
               <Link

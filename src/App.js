@@ -5,6 +5,7 @@ import './App.css';
 import NavBar from './Components/NavBar/NavBar';
 import NotFound from './Components/NotFound/NotFound';
 import About from './Pages/About/About';
+import AddNewServices from './Pages/AddNewServices/AddNewServices';
 import Home from './Pages/Home/Home';
 
 function App() {
@@ -21,6 +22,9 @@ function App() {
              </Route>
              <Route exact path="/home">
                 <Home></Home>
+             </Route>
+             <Route path="/addservices">
+                <AddNewServices></AddNewServices>
              </Route>
              <Route  path="/about">
                 <About></About>
