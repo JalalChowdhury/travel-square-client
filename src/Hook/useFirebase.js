@@ -1,50 +1,67 @@
 import { useEffect, useState } from "react";
 import initializeAuthentication from "../Firebase/firebase.initialize";
-import { getAuth, signInWithPopup,
-     GoogleAuthProvider, onAuthStateChanged, signOut } from "firebase/auth";
+import {
+    getAuth, signInWithPopup,
+    GoogleAuthProvider, onAuthStateChanged, signOut
+} from "firebase/auth";
+// import { useHistory, useLocation } from "react-router";
 initializeAuthentication();
 
 
-const useFirebase = () =>{
-        const [user,setUser] = useState({});
-        const [error,setError] = useState('');
+const useFirebase = () => {
+    const [user, setUser] = useState({});
+    const [error, setError] = useState('');
 
-        const auth = getAuth();
-        const googleProvider = new GoogleAuthProvider();
+    // const history = useHistory();
+    // const location = useLocation();
 
-        const signInUsingGoogle = () => {
-            signInWithPopup(auth, googleProvider)
-              .then( (result) => {
-                  console.log(result.user);
-                  setUser(result.user);
-                // const user = result.user;
-              })
-              .catch(err =>{
-                  setError(err.message)
-              })
-        }
+    const auth = getAuth();
+    const googleProvider = new GoogleAuthProvider();
 
-        const logout =() =>{
-            signOut(auth)
-              .then( () => {
-                  setUser({});
-              })
-        }
+    // decleare after login location 
+    // const { from } = location.state || { from: { pathname: "/" } };
 
-        useEffect( () =>{
-            onAuthStateChanged(auth, user=>{
-                if(user){
-                    console.log("inside state change" , user);
-                    setUser(user);
-                }
+    const signInUsingGoogle = () => {
+        signInWithPopup(auth, googleProvider)
+            .then((result) => {
+                console.log(result.user);
+                setUser(result.user);
+
+                //optional
+                // localStorage.setItem('user', JSON.stringify(user))
+                // const localUser = localStorage.getItem('user') ? JSON.parse(localStorage.getItem('user')) : null;
+                
+                // setUser(localUser? { "user": localUser }:null);
+
+                // history.push(from);
+
             })
-        },[])
-        return{
-            user,
-            error, 
-            logout,
-            signInUsingGoogle 
-        }
+            .catch(err => {
+                setError(err.message)
+            })
+    }
+
+    const logout = () => {
+        signOut(auth)
+            .then(() => {
+                setUser({});
+            })
+    }
+
+    useEffect(() => {
+        onAuthStateChanged(auth, user => {
+            if (user) {
+                console.log("inside state change", user);
+                setUser(user);
+            }
+        })
+    }, [])
+    return {
+        user,
+        error,
+        logout,
+        signInUsingGoogle
+    }
 
 }
-export default useFirebase ;
+export default useFirebase;

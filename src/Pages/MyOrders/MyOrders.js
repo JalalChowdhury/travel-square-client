@@ -1,7 +1,7 @@
 
-import Button from '@restart/ui/esm/Button';
+// import Button from '@restart/ui/esm/Button';
 import React, { useEffect, useState } from 'react';
-import { Table } from 'react-bootstrap';
+import { Table,Button } from 'react-bootstrap';
 import useAuth from '../../Hook/useAuth';
 import './MyOrders.css';
 
@@ -44,8 +44,8 @@ const MyOrders = () => {
 
 
     return (
-        <div>
-            <h1>myorders</h1>
+        <div className="py-5">
+            
             <h3>Name : {orders[0]?.userName}</h3>
             <h3>Email : {orders[0]?.userEmail}</h3>
             <div className="table-div">

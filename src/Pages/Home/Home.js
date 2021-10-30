@@ -1,5 +1,9 @@
 import React, { useEffect, useState } from 'react';
+import Experience from '../../Components/Experience/Experience';
+import FAQ from '../../Components/FAQ/FAQ';
 import ServicePackage from '../../Components/ServicePackage/ServicePackage';
+// import TravelersReviews from '../../components/TravelersReviews/TravelersReviews';
+
 import "./Home.css";
 const Home = () => {
    
@@ -20,6 +24,11 @@ const Home = () => {
      
      return (
          <div className="home" >
+
+
+             <div>
+                 <Experience></Experience>
+             </div>
  
              <div className='d-flex justify-content-center align-items-center'>
                  <div>
@@ -28,7 +37,7 @@ const Home = () => {
  
                          {/* <div className="d-flex flex-wrap  justify-content-center align-items-center mx-2"> */}
                          {
-                             topServices.map(service =>
+                             topServices?.map(service =>
  
                                  <ServicePackage
                                      key={service.id}
@@ -42,6 +51,14 @@ const Home = () => {
  
                  </div>
              </div>
+
+             <div>
+                 <FAQ></FAQ>
+             </div>
+
+             {/* <div>
+                 <TravelersReviews></TravelersReviews>
+             </div> */}
              
  
  

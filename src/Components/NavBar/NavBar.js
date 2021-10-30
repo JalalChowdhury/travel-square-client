@@ -1,9 +1,12 @@
 import React from "react";
-import { Container, Nav, Navbar } from "react-bootstrap";
+import { Button, Container, Nav, Navbar } from "react-bootstrap";
 import { Link } from "react-router-dom";
 import "./NavBar.css";
+import useAuth from './../../Hook/useAuth';
+
 const NavBar = () => {
-  
+
+  const { user, logout } = useAuth();
 
   return (
     <div style={{ marginBottom: '60px' }}    >
@@ -34,26 +37,26 @@ const NavBar = () => {
                 Home
               </Link>
 
+              {
+                user?.email && <Link to="/myorders" className="text-decoration-none fs-5 me-3 header-text fw-bold"
+                >
+                  My Orders
+                </Link>
 
-              <Link
-                to="/myorders"
-                className="text-decoration-none fs-5 me-3 header-text fw-bold"
-              >
-                My Orders
-              </Link>
+              }
 
               <Link
                 to="/manageorders"
                 className="text-decoration-none fs-5 me-3 header-text fw-bold"
               >
-                Manage all Orders
+                ManageOrders
               </Link>
 
               <Link
                 to="/addservices"
                 className="text-decoration-none fs-5 me-3 header-text fw-bold"
               >
-                Add Services
+                Add Service
               </Link>
 
               <Link
@@ -62,15 +65,23 @@ const NavBar = () => {
               >
                 About
               </Link>
-              <Link
-                to="/login"
-                className="text-decoration-none fs-5 me-3 header-text fw-bold"
-              >
-                Login
-              </Link>
-             
 
-             
+              <span className="fw-bold pt-2 px-2">{user?.displayName} </span>
+              {
+                user?.email ?
+
+                  <Button onClick={logout} className="text-decoration-none fs-5 me-3 header-text fw-bold">Log Out</Button>
+                  :
+                  <Link
+                    to="/login"
+                    className="text-decoration-none fs-5 me-3 header-text fw-bold"
+                  >
+                    Login
+                  </Link>
+              }
+
+
+
 
 
             </Nav>
