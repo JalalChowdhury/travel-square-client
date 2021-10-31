@@ -32,8 +32,10 @@ filter: blur(2px) grayscale(50%);
     font-weight: bolder;
 
 }
-/* kkk */
-
+.packages-bg{
+    background-color: #f0f2f5;
+}
+#f0f2f5
 .servicBtn-design{
 
     background-color: #00bcd4;

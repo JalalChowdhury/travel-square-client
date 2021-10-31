@@ -6,7 +6,7 @@ import experience_trips from '../../assets/experience-trips.png';
 const Experience = () => {
     return (
         <div className="text-center experience py-5">
-            <h1>The Most Perferred</h1>
+            <h1>The Most <span className="blue-color">Perferred</span></h1>
             <p>We have devoloped into a service that provides better and most trusted travel</p>
             <p>in the past more than 5 years with the achivements</p>
 

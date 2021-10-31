@@ -32,7 +32,7 @@ function App() {
                   <Route exact path="/">
                      <Home></Home>
                   </Route>
-                  <Route exact path="/home">
+                  <Route path="/home">
                      <Home></Home>
                   </Route>
                   <Route  path="/packages">
@@ -48,9 +48,9 @@ function App() {
                   <Route path="/contact">
                       <Contact></Contact>
                   </Route>
-                  <Route path='/manageorders'>
+                  <PrivateRoute path='/manageorders'>
                      <ManageOrders></ManageOrders>
-                  </Route>
+                  </PrivateRoute>
                   <PrivateRoute path="/package/:serviceId">
                      <OrderPlace></OrderPlace>
                   </PrivateRoute>

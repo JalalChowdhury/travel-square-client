@@ -42,7 +42,7 @@ const Home = () => {
             <div>
                 <img src={headerBanner} className="img-fluid homeBanner" alt="" />
                 <div className="header-bodyDesign">
-                    
+
                     <h1 id="home-header1">Let's Make Your Best </h1>
                     <h1 id="home-header1">Trip Ever</h1>
                     <p id="home-header2" className="home-text my-3">Plan and book your perfect trip with expert advice travel tips,destination information and inspiration from us.</p>
@@ -61,9 +61,9 @@ const Home = () => {
             </div>
 
             {
-                services ? <div className='d-flex justify-content-center align-items-center'>
+                services ? <div className='d-flex justify-content-center align-items-center packages-bg'>
                     <div>
-                        <h2 className=" text-center my-5">Popular <span className="blue-color">Packages</span></h2>
+                        <h2 className=" text-center my-5 py-5">Popular <span className="blue-color">Packages</span></h2>
                         <div className="row row-cols-1 row-cols-lg-3 g-4 px-5 mx-auto">
 
                             {/* <div className="d-flex flex-wrap  justify-content-center align-items-center mx-2"> */}
@@ -86,7 +86,7 @@ const Home = () => {
 
                     // <Spinner animation="grow" variant="info" />
                     <Spinner animation="border" variant="danger" />
-                    
+
             }
 
             <div>

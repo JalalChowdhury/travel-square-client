@@ -9,8 +9,8 @@ const ServicePackage = (props) => {
 
     const serviceDetailURL = `/package/${_id}`;
     return (
-        <div className=" card_container col my-2 d-flex flex-wrap justify-content-center align-items-center mb-4">
-            <div className="card-design h-100">
+        <div className=" card_container col my-2 d-flex flex-wrap justify-content-center align-items-center mb-4 ">
+            <div className="card-design h-100 pb-3">
 
 
                 <img className="card_img img-fluid p-2" src={image} alt="" />

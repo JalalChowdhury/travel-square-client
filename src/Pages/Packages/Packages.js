@@ -19,7 +19,7 @@ const Packages = () => {
     return (
         <div className="packages">
 
-            <div className='d-flex justify-content-center align-items-center'>
+            <div className='d-flex justify-content-center align-items-center packages-bg'>
                 <div>
                     <h1 className=" text-center my-5">Our <span className="blue-color">Packages</span></h1>
                     <div className="row row-cols-1 row-cols-lg-3 g-4 px-5 mx-auto">
