@@ -1,3 +1,38 @@
+
+.addService{
+    overflow: hidden;
+}
+#addService-header1{
+    font-size: 60px;
+    color:navy;
+}
+#addService-header2{
+
+color:#00bcd4;
+font-size: 20px;
+}
+.addServiceBanner{
+    min-width: 100%;
+    max-height: 400px;
+    filter: blur(2px) grayscale(50%);
+}
+
+
+
+.addService-bodyDesign{
+    position: absolute;
+    top: 30%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+
+}
+.addService-text{
+    color: white;
+    font-weight: bolder;
+
+}
+
 .addService input{
     width: 50%;
     margin: auto;
@@ -5,4 +40,19 @@
 .addService textarea{
     width: 50%;
     margin: auto;
+}
+
+@media only screen and (max-width: 688px) {
+        
+    #addService-header1{
+        font-size: 30px;
+        color:navy;
+    }
+    .addServiceBanner{
+        
+        height: 250px;
+      
+    }
+    
+
 }

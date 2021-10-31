@@ -37,6 +37,13 @@ const NavBar = () => {
                 Home
               </Link>
 
+              <Link
+                to="/packages"
+                className="text-decoration-none fs-5 me-3 header-text fw-bold"
+              >
+                Packages
+              </Link>
+
               {
                 user?.email && <Link to="/myorders" className="text-decoration-none fs-5 me-3 header-text fw-bold"
                 >
@@ -59,13 +66,7 @@ const NavBar = () => {
                 Add Service
               </Link>
 
-              <Link
-                to="/about"
-                className="text-decoration-none fs-5 me-3 header-text fw-bold"
-              >
-                About
-              </Link>
-
+             
               <Link
                 to="/contact"
                 className="text-decoration-none fs-5 me-3 header-text fw-bold"

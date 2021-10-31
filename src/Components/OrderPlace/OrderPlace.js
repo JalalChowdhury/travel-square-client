@@ -12,7 +12,7 @@ const OrderPlace = () => {
 
     useEffect(() => {
 
-        const url = `http://localhost:5000/services/${serviceId}`;
+        const url = `https://dreadful-vampire-25678.herokuapp.com/services/${serviceId}`;
 
         fetch(url)
             .then(res => res.json())
@@ -22,7 +22,7 @@ const OrderPlace = () => {
 
     const handlePlaceOrder = () => {
         // fetch for .. 
-        fetch("http://localhost:5000/addOrder", {
+        fetch("https://dreadful-vampire-25678.herokuapp.com/addOrder", {
             method: 'POST',
             headers: {
                 'content-type': 'application/json'

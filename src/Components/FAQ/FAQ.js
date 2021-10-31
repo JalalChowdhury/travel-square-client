@@ -4,7 +4,7 @@ import './FAQ.css';
 
 const FaqAbout = () => {
     return (
-        <section className="py-5 container" id="about">
+        <section className="py-5 container mt-5" id="about">
 
             <div className="top-text">
                 <h1> - FREQUENTLY ASKED <span className="blue-color">QUESTIONS -</span></h1>

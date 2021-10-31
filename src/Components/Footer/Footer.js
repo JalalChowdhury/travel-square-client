@@ -34,9 +34,9 @@ const Footer = () => {
 
                     <div className="col-md-2 ml-1">
                         <h3 className="">Our Services</h3>
-                        <p> <small>Tour packages</small> </p>
-                        <p> <small>Travel tips and suggetios</small> </p>
-                        <p> <small>Advanced booking for Tour packages</small> </p>
+                        <p> <small>Cox's Bazar Tour</small> </p>
+                        <p> <small>Sajek Vallyey Tour</small> </p>
+                        <p> <small>Innai beach Tour</small> </p>
                         <p> <small>Others</small> </p>
 
 
@@ -46,16 +46,16 @@ const Footer = () => {
                         <h3 className="">Recent Events</h3>
                         <p><small>Cox's bazars Mega Tour</small></p>
                         <p><small>Sajek Valley Special 10 Days Tour</small></p>
-                        <p><small>Special .</small></p>
+                        <p><small>"Sajek Mega Tour",_Dec,2020 </small></p>
 
                     </div>
 
                     <div className="col-md-2 ml-1">
                         <h3 className="">FAQ</h3>
-                        <p> <small>tour</small> </p>
-                        <p> <small></small> </p>
-                        <p> <small></small> </p>
-                        <p> <small></small> </p>
+                        <p> <small>Can you Join after Vaccined</small> </p>
+                        <p> <small>Travel Insurance</small> </p>
+                        <p> <small>Travel Insurance</small> </p>
+                        <p> <small>What should i being</small> </p>
                         
                     </div>
 

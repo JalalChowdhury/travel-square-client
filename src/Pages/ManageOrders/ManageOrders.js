@@ -13,7 +13,7 @@ const ManageOrders = () => {
 
     useEffect(() => {
 
-        fetch('http://localhost:5000/orders')
+        fetch('https://dreadful-vampire-25678.herokuapp.com/orders')
             .then(res => res.json())
             .then(data => {
                 setOrdersData(data);
@@ -33,7 +33,7 @@ const ManageOrders = () => {
     // console.log(ostatus);
 
     const handleStatusUpdate = (id, status) => {
-        fetch(`http://localhost:5000/updateOrderStatus`, {
+        fetch(`https://dreadful-vampire-25678.herokuapp.com/updateOrderStatus`, {
             method: 'PATCH',
             headers: { 'Content-Type': 'application/json' },
             body: JSON.stringify({
@@ -74,10 +74,10 @@ const ManageOrders = () => {
     }
 
     return (
-        <div>
-            <h1>Manage orders</h1>
+        <div className="manageOrders">
+            <h1 className="blue-color mt-5">Manage Orders</h1>
 
-            <div className="table-div">
+            <div className="table-div tableDesign">
                 <Table striped bordered hover  size="md" >
                     <thead>
                         <tr>

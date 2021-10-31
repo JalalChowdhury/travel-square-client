@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import ReviewCard from '../ReviewCard/ReviewCard';
 
-
+import './Reviews.css';
 
 const Reviews = () => {
 
@@ -12,17 +12,17 @@ const Reviews = () => {
 
     useEffect(() => {
 
-        fetch("http://localhost:5000/reviews")
+        fetch("https://dreadful-vampire-25678.herokuapp.com/reviews")
             .then(res => res.json())
             .then(data => setReviews(data));
     }, [])
 
     return (
-        <div>
+        <div className="reviews">
 
-            <div className='d-flex justify-content-center align-items-center'>
+            <div className='d-flex justify-content-center align-items-center pt-5 pb-5'>
                 <div className="container">
-                    <h2 className=" text-center my-5">Awesome <span className="blue-color">Reviews</span></h2>
+                    <h1 className=" text-center my-5">Awesome <span className="blue-color">Reviews</span></h1>
                     <div className="row row-cols-1 row-cols-lg-3 g-4 px-5 mx-auto">
 
                         {/* <div className="d-flex flex-wrap  justify-content-center align-items-center mx-2"> */}

@@ -9,7 +9,7 @@ const Contact = () => {
         alert("As Soon as,We will contact You");
     }
     return (
-        <>
+        <div className="contact">
             <div className="w-50 mx-auto">
                 <div>
                     <h1 className="text-center my-1 my-4">Have Some <span className="blue-color">Question?</span></h1>
@@ -58,37 +58,39 @@ const Contact = () => {
             <div className="d-flex justify-content-center align-items-center py-5">
                 <div className="row my-1">
 
-                    <div className="col-md-6">
-                        <div className="d-flex align-items-center">
-                            <div className="icons-design navy-color">
-                                <i className="fas fa-plus-square"></i>
-                            </div>
-                            <div className="d-flex justify-content-center align-items-center">
-                                <div>
-                                    <h3>100+ <span className="blue-color">Tour Packages</span></h3>
-                                    <h5>Special Offers limited time</h5>
+                    <div className="col-md-6 px-3 d-flex justify-content-center align-items-center">
+                        <div>
+                            <div className="d-flex align-items-center">
+                                <div className="icons-design navy-color">
+                                    <i className="fas fa-plus-square"></i>
+                                </div>
+                                <div className="d-flex justify-content-center align-items-center">
+                                    <div>
+                                        <h3>100+ <span className="blue-color">Tour Packages</span></h3>
+                                        <h5>Special Offers limited time</h5>
+                                    </div>
                                 </div>
                             </div>
-                        </div>
-                        <div className="d-flex  align-items-center">
-                            <div className="icons-design navy-color">
-                                <i className="fas fa-phone-square-alt"></i>
-                            </div>
-                            <div className="d-flex justify-content-center align-items-center">
-                                <div>
-                                    <h3><span className="blue-color">CALL US</span> TODAY</h3>
-                                    <h5>(+88) 01758- 785521</h5>
+                            <div className="d-flex  align-items-center">
+                                <div className="icons-design navy-color">
+                                    <i className="fas fa-phone-square-alt"></i>
+                                </div>
+                                <div className="d-flex justify-content-center align-items-center">
+                                    <div>
+                                        <h3><span className="blue-color">CALL US</span> TODAY</h3>
+                                        <h5>(+88) 01758- 785521</h5>
+                                    </div>
                                 </div>
                             </div>
-                        </div>
-                        <div className="d-flex  align-items-center">
-                            <div className="icons-design navy-color">
-                                <i className="fas fa-envelope-square"></i>
-                            </div>
-                            <div className="d-flex justify-content-center align-items-center">
-                                <div>
-                                    <h3>SEND US AN <span className="blue-color">E-MAIL</span> </h3>
-                                    <h5>travel.square@gmail.com</h5>
+                            <div className="d-flex  align-items-center">
+                                <div className="icons-design navy-color">
+                                    <i className="fas fa-envelope-square"></i>
+                                </div>
+                                <div className="d-flex justify-content-center align-items-center">
+                                    <div>
+                                        <h3>SEND US AN <span className="blue-color">E-MAIL</span> </h3>
+                                        <h5>travel.square@gmail.com</h5>
+                                    </div>
                                 </div>
                             </div>
                         </div>
@@ -102,7 +104,7 @@ const Contact = () => {
                         </div>
 
                     </div>
-                   
+
                 </div>
 
             </div>
@@ -110,7 +112,7 @@ const Contact = () => {
 
 
 
-        </>
+        </div>
     );
 };
 

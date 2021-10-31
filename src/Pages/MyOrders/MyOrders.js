@@ -13,7 +13,7 @@ const MyOrders = () => {
     let index = 1;
 
     useEffect(() => {
-        fetch('http://localhost:5000/userOrders?email=' + user.email, {
+        fetch('https://dreadful-vampire-25678.herokuapp.com/userOrders?email=' + user.email, {
             method: 'GET',
             headers: {
                 'Content-Type': 'application/json',
@@ -25,7 +25,7 @@ const MyOrders = () => {
     }, [])
 
     const handleOrderCancel = id => {
-        fetch(`http://localhost:5000/cancelOrder/${id}`, {
+        fetch(`https://dreadful-vampire-25678.herokuapp.com/cancelOrder/${id}`, {
             method: "DELETE"
         })
             .then(res => res.json())

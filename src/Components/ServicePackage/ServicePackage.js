@@ -7,7 +7,7 @@ const ServicePackage = (props) => {
 
     const { _id, title, image, price, description } = props.service;
 
-    const serviceDetailURL = `/home/${_id}`;
+    const serviceDetailURL = `/package/${_id}`;
     return (
         <div className=" card_container col my-2 d-flex flex-wrap justify-content-center align-items-center mb-4">
             <div className="card-design h-100">
