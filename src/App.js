@@ -1,8 +1,10 @@
 // import logo from './logo.svg';
 import 'bootstrap/dist/css/bootstrap.min.css';
 
-import { BrowserRouter, Switch, Route } from 'react-router-dom';
+
+import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 import './App.css';
+import Footer from './Components/Footer/Footer';
 import Login from './Components/Login/Login';
 import NavBar from './Components/NavBar/NavBar';
 import NotFound from './Components/NotFound/NotFound';
@@ -11,6 +13,7 @@ import PrivateRoute from './Components/PrivateRoute/PrivateRoute';
 import AuthProvider from './context/AuthProvider';
 import About from './Pages/About/About';
 import AddNewServices from './Pages/AddNewServices/AddNewServices';
+import Contact from './Pages/Contact/Contact';
 import Home from './Pages/Home/Home';
 import ManageOrders from './Pages/ManageOrders/ManageOrders';
 import MyOrders from './Pages/MyOrders/MyOrders';
@@ -20,7 +23,7 @@ function App() {
       <div className="App">
 
          <AuthProvider>
-            <BrowserRouter>
+            <Router>
 
                <NavBar />
 
@@ -36,6 +39,9 @@ function App() {
                   </PrivateRoute>
                   <Route path="/about">
                      <About></About>
+                  </Route>
+                  <Route path="/contact">
+                      <Contact></Contact>
                   </Route>
                   <Route path='/manageorders'>
                      <ManageOrders></ManageOrders>
@@ -56,7 +62,8 @@ function App() {
 
 
                </Switch>
-            </BrowserRouter>
+               <Footer></Footer>
+            </Router>
          </AuthProvider>
 
 

@@ -66,6 +66,13 @@ const NavBar = () => {
                 About
               </Link>
 
+              <Link
+                to="/contact"
+                className="text-decoration-none fs-5 me-3 header-text fw-bold"
+              >
+                Contact
+              </Link>
+
               <span className="fw-bold pt-2 px-2">{user?.displayName} </span>
               {
                 user?.email ?

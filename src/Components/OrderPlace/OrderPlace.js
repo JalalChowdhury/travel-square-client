@@ -46,7 +46,7 @@ const OrderPlace = () => {
             .then(data => {
                 if (data.insertedId) {
                     alert("Successfully placed order");
-                    
+
                 }
             })
 
@@ -56,21 +56,39 @@ const OrderPlace = () => {
 
 
     return (
-        <div>
-            <img src={service.image} alt="" />
-            <div>
-                <h4>{service.title}</h4>
-                <h5>$ {service.price}</h5>
-                <p>{service.description}</p>
+        <div className="orderDetails">
+           
 
-                <br />
-                <h1>User Info:</h1>
-                <h2>Name : {user.displayName}</h2>
-                <h4>Email : {user.email}</h4>
-                <br />
-                <br />
-                <Button className="btn-design" onClick={handlePlaceOrder}>Order Place</Button>
+
+            <div className=" detailsCard_container col my-2 d-flex flex-wrap justify-content-center align-items-center mb-4">
+                <div className="detailsCard-design h-100">
+
+
+                    <img className="detailsCard-img img-fluid p-2" src={service.image} alt="" />
+
+                    <div className="detailsCard_body p-2">
+
+                        <h4>{service.title}</h4>
+                        <h5>${service.price}</h5>
+                        <p>{service.description}</p>
+
+                        <br />
+                        <h4>My Information:</h4>
+                        <h5>Name : {user.displayName}</h5>
+                        <p>Email : {user.email}</p>
+                        <br />
+                        <br />
+                        <Button className="btn-design" onClick={handlePlaceOrder}>Order Place</Button>
+
+
+                    </div>
+
+
+                </div>
+
             </div>
+
+
         </div>
     );
 };

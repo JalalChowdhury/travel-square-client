@@ -2,44 +2,72 @@ import { useEffect, useState } from "react";
 import initializeAuthentication from "../Firebase/firebase.initialize";
 import {
     getAuth, signInWithPopup,
-    GoogleAuthProvider, onAuthStateChanged, signOut
+    GoogleAuthProvider, onAuthStateChanged, signOut , updateProfile
 } from "firebase/auth";
-// import { useHistory, useLocation } from "react-router";
+
 initializeAuthentication();
 
 
 const useFirebase = () => {
     const [user, setUser] = useState({});
-    const [error, setError] = useState('');
+    const [isLoading , setIsLoading] =useState(true)
+    
+    // const [error, setError] = useState('');
 
-    // const history = useHistory();
-    // const location = useLocation();
-
+   
     const auth = getAuth();
     const googleProvider = new GoogleAuthProvider();
 
-    // decleare after login location 
-    // const { from } = location.state || { from: { pathname: "/" } };
+    // 
+    useEffect(() =>{
+        const unsubscribe = onAuthStateChanged(auth , (user)=> {
+        //    console.log(user);
+             if(user){
+                  
+                 setUser(user)
+             } else{
+                 setUser({})
+             }
+             setIsLoading(false)
+        })
+         return ()=> unsubscribe()
+   },[])
+    
 
-    const signInUsingGoogle = () => {
-        signInWithPopup(auth, googleProvider)
-            .then((result) => {
-                console.log(result.user);
-                setUser(result.user);
+    // const signInUsingGoogle = () => {
+    //     signInWithPopup(auth, googleProvider)
+    //         .then((result) => {
+    //             console.log(result.user);
+    //             setUser(result.user);
 
-                //optional
-                // localStorage.setItem('user', JSON.stringify(user))
-                // const localUser = localStorage.getItem('user') ? JSON.parse(localStorage.getItem('user')) : null;
+    //             //optional
+    //             // localStorage.setItem('user', JSON.stringify(user))
+    //             // const localUser = localStorage.getItem('user') ? JSON.parse(localStorage.getItem('user')) : null;
                 
-                // setUser(localUser? { "user": localUser }:null);
+    //             // setUser(localUser? { "user": localUser }:null);
 
-                // history.push(from);
-
-            })
-            .catch(err => {
-                setError(err.message)
-            })
+            
+    //         })
+    //         .catch(err => {
+    //             setError(err.message)
+    //         })
+    // }
+    const signInUsingGoogle = () => {
+        return signInWithPopup(auth, googleProvider)
     }
+    const updateName= (name)=> {
+        updateProfile(auth.currentUser, {
+          displayName: name
+        }).then(() => {
+          const newUser={...user, displayName: name} // recommend
+         setUser(newUser)
+          
+          // ...
+        }).catch((error) => {
+          // An error occurred
+          // ...
+        });
+      }
 
     const logout = () => {
         signOut(auth)
@@ -57,8 +85,8 @@ const useFirebase = () => {
         })
     }, [])
     return {
-        user,
-        error,
+        user,setUser,
+        setIsLoading,
         logout,
         signInUsingGoogle
     }
